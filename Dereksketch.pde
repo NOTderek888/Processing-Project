@@ -1,13 +1,9 @@
 /*
  
- sketch_1_forloop
- 
- Your neighborhood association wants you to build a white
- picket privacy fence. You've put up the fence rail and
- one picket. Write a loop to place all ten pickets!
+ brickwall with seizure inducing blob guy
  
 */
-//bricks
+//bricks with random colors
 import java.util.Random;
 void brick(int x, int y) {
   beginShape();
@@ -20,7 +16,7 @@ void brick(int x, int y) {
   
   endShape(CLOSE);
 }
-//stopsign creator
+//stopsign creator, without letters
 void oct(int x, int y){
   beginShape();
   int xdif = 80;
@@ -36,7 +32,7 @@ void oct(int x, int y){
   vertex((x+xdif),(y));
   endShape(CLOSE);
 }
-//cylinder
+//cylinder for pole of stopsign
 void cyl(int x, int y){
   
   beginShape();
@@ -53,6 +49,18 @@ void cyl(int x, int y){
   endShape(CLOSE);
   
 }
+//nice guy with eyes
+void nice(int x, int y){
+  Random rand = new Random();
+  fill(rand.nextInt(255),rand.nextInt(255),rand.nextInt(255));
+  rect(x,y,100,100,50,50,50,50);
+  fill(255,255,255);
+  ellipse(x+25,y+75,25,25);
+  ellipse(x+75,y+75,25,25);
+  fill(0,0,0);
+  ellipse(x+25,y+75,10,10);
+  ellipse(x+75,y+75,10,10);
+}
 void setup() {
   size(1200, 700);
   noStroke();
@@ -66,6 +74,17 @@ void setup() {
   fill(73, 26, 19);
   rect(0,625,1200,100);
   
-
+  nice(600,525);
+  
+  
  
+  
+}
+void draw(){
+  int x = 600;
+  int y = 525;
+  nice(x,y);
+  delay(50);
+  
+  
 }
