@@ -53,13 +53,13 @@ void cyl(int x, int y){
 void nice(int x, int y){
   Random rand = new Random();
   fill(rand.nextInt(255),rand.nextInt(255),rand.nextInt(255));
-  rect(x,y,100,100,50,50,50,50);
+  rect(x,y,200,200,100,100,100,100);
   fill(255,255,255);
-  ellipse(x+25,y+75,25,25);
-  ellipse(x+75,y+75,25,25);
+  ellipse(x+50,y+150,50,50);
+  ellipse(x+150,y+150,50,50);
   fill(0,0,0);
-  ellipse(x+25,y+75,10,10);
-  ellipse(x+75,y+75,10,10);
+  ellipse(x+50,y+150,20,20);
+  ellipse(x+150,y+150,20,20);
 }
 void setup() {
   size(1200, 700);
@@ -74,7 +74,7 @@ void setup() {
   fill(73, 26, 19);
   rect(0,625,1200,100);
   
-  nice(600,525);
+  nice(600,425);
   
   
  
@@ -82,7 +82,7 @@ void setup() {
 }
 void draw(){
   int x = 600;
-  int y = 525;
+  int y = 425;
   nice(x,y);
   delay(50);
   
