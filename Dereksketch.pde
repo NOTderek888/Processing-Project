@@ -38,21 +38,24 @@ void oct(int x, int y){
 }
 //cylinder
 void cyl(int x, int y){
-  beginShape();
   
+  beginShape();
+  int ydif = 300;
   fill(200,200,200);
+  ellipse(x,y+ydif,20,20);
   vertex(x-10, y);
-  vertex(x-10,y+100);
-  vertex(x+10,y+100);
+  vertex(x-10,y+ydif);
+  vertex(x+10,y+ydif);
   vertex(x+10,y);
   
   
-
+  
   endShape(CLOSE);
+  
 }
 void setup() {
   size(1200, 700);
-  stroke(0,0,0);
+  noStroke();
   for(int i = 0; i<1200; i+=40){
     for(int y = 0; y<700;y+=30){
       brick(i,y);
@@ -60,7 +63,8 @@ void setup() {
   }
   cyl(640,340);
   oct(600,100);
-  
+  fill(73, 26, 19);
+  rect(0,625,1200,100);
   
 
  
